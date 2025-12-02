@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SS_DS AX 과제 아이디어 생성기</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+
+      @media print {
+        @page {
+          size: 100mm 150mm;
+          margin: 0;
+        }
+
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          margin: 0;
+        }
+
+        /* Hide everything by default when printing */
+        body * {
+          visibility: hidden;
+        }
+        
+        /* Make the printable container and its contents visible */
+        #printable-cards, #printable-cards * {
+          visibility: visible;
+        }
+
+        /* Position the container at the top-left of the page */
+        #printable-cards {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+
+        .printable-card-page {
+          width: 100mm;
+          height: 150mm;
+          padding: 6mm;
+          box-sizing: border-box;
+          overflow: hidden; /* Clip any content that overflows */
+          page-break-after: always;
+        }
+
+        .printable-card-page:last-child {
+          page-break-after: auto;
+        }
+        
+        /* --- FONT & SPACING OVERRIDES FOR PRINT --- */
+        .printable-card-page .idea-card-component {
+          padding: 0 !important;
+          border: none !important;
+          box-shadow: none !important;
+          height: auto !important; /* Allow card to shrink vertically based on content */
+        }
+        /* Target the sections container to remove space distribution */
+        .printable-card-page .idea-card-component > div:last-child {
+            flex-grow: 0 !important;
+            justify-content: flex-start !important;
+        }
+        /* Reduce margin between sections (overrides Tailwind's space-y-6) */
+        .printable-card-page .idea-card-component > div:last-child > * + * {
+            margin-top: 16px !important;
+        }
+
+        .printable-card-page h2 {
+            font-size: 18pt !important;
+            line-height: 1.2 !important;
+        }
+        .printable-card-page .category-badge {
+            font-size: 10pt !important;
+            padding: 2px 8px !important;
+        }
+        .printable-card-page .process-text {
+            font-size: 10.5pt !important;
+            font-weight: 700 !important;
+            margin-top: 6px !important;
+            color: #475569 !important;
+        }
+        .printable-card-page hr {
+            margin-top: 12px !important; /* Reduced */
+            margin-bottom: 12px !important; /* Reduced */
+        }
+        .printable-card-page h3 {
+            font-size: 12pt !important;
+            margin-bottom: 6px !important; /* Reduced */
+        }
+        .printable-card-page p {
+            font-size: 10.5pt !important;
+            line-height: 1.5 !important;
+        }
+        .printable-card-page .pill {
+            font-size: 9pt !important;
+            padding: 2px 6px !important;
+            background-color: #f1f5f9 !important;
+            border: 1px solid #cbd5e1 !important;
+        }
+        .printable-card-page .pill-container {
+            gap: 6px 4px !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
