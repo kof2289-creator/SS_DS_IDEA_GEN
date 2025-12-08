@@ -31,7 +31,7 @@ export const IdeaCard = forwardRef<HTMLDivElement, IdeaCardProps>(({ data }, ref
                 {data.category}
             </span>
         </div>
-        <p className="process-text mt-2 text-base text-slate-600 font-bold">{data.process}</p>
+        <p className="process-text mt-2 text-base text-slate-600 font-bold break-words">{data.process}</p>
       </div>
 
       <hr className="my-4 border-slate-200" />
