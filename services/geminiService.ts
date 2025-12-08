@@ -26,5 +26,5 @@ export const generateIdea = async (
     throw new Error("AI 응답이 카드 배열 형식이 아닙니다.");
   }
 
-  return data as IdeaCardData[];
+  return data as IdeaCardData[]; 
 };
