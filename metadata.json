@@ -1,5 +1,5 @@
 {
-  "name": "SS_DS AX Idea Generator",
+  "name": "삼성전자DS AX Idea Generator",
   "description": "A tool to generate AI Transformation (AX) solution ideas based on business area, pain points, and expectations.",
   "requestFramePermissions": []
 }
