@@ -1,6 +1,6 @@
 // services/geminiService.ts
 
-import type { FormData, IdeaCardData } from "../types";
+import type { FormData, IdeaCardData } from "../types.ts";
 
 const WORKER_BASE_URL = "https://ssds-seed.kof2289.workers.dev";
 
