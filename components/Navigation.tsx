@@ -28,7 +28,7 @@ export const Navigation: React.FC = () => {
                 : 'text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800'
             }`}
           >
-            AX 시나리오 생성기
+            시나리오 생성기
           </button>
         </div>
       </div>
